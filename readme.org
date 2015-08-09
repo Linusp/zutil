@@ -17,8 +17,8 @@
 ** Shell Script
 
    见 script 目录
-   + trash.sh: 更安全的删除工具
-   + within.sh: 通过内容查找文件(目前仅支持文本文件)
+   + [[file:shell/trash.sh][trash.sh]]: 更安全的删除工具
+   + [[file:shell/within.sh][within.sh]]: 通过内容查找文件(目前仅支持文本文件)
 
 ** Python Script
 
