@@ -1,1 +1,27 @@
-* My tools
+* ZUtil
+
+  懒人的自造轮子
+
+** Software
+
+   一些常用或喜欢的工具集合
+
+** CCUtil
+
+   自己编写的 C/C++ 小工具，见 ccutil 目录
+
+** CCLib
+
+   自己编写的 C/C++ 库，见 cclib 目录
+
+** Shell Script
+
+   见 script 目录
+   + trash.sh: 更安全的删除工具
+   + within.sh: 通过内容查找文件(目前仅支持文本文件)
+
+** Python Script
+
+   TODO
+
+
