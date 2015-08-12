@@ -1,0 +1,41 @@
+{
+    "lang": "chi_eng",
+    "font": {
+        "wqy": {
+            "font-dir": "/usr/share/fonts/truetype",
+            "sub-font": {
+                "fixed": "WenQuanYi Micro Hei"
+            }
+        },
+        "sun": {
+            "font-dir": "/home/linusp/datas/fonts/",
+            "sub-font": {
+                "serif": "SimSun"
+            }
+        },
+        "nsun": {
+            "font-dir": "/home/linusp/datas/fonts/",
+            "sub-font": {
+                "serif": "NSimSun"
+            }
+        },
+        "times": {
+            "font-dir": "/home/linusp/data/fonts/TimesNewRoman",
+            "sub-font": {
+                "italic": "Times New Roman, Italic",
+                "bold": "Times New Roman, Bold",
+                "serif": "Times New Roman,"
+            }
+        }
+    },
+    "data": {
+        "chi": {
+            "file-name": "chi.txt",
+            "font-list": ["wqy", "sun", "nsun"]
+        },
+        "eng": {
+            "file-name": "eng.txt",
+            "font-list": ["wqy", "times"]
+        }
+    }
+}
