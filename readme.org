@@ -28,4 +28,5 @@
 
 ** Python Script
 
-   TODO
+   见 python 目录
+   + [[file:python/tess_train.py][tess_train.py]]: OCR 工具 Tesseract 的训练工具
