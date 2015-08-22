@@ -16,8 +16,6 @@ ACTION_MAP = {
     'all': 'train'
 }
 
-CONFIG_TEMPLATE = 'config.json.tmpl'
-
 
 def load_config(conf_file):
     config = {}
@@ -28,24 +26,6 @@ def load_config(conf_file):
         print str(e)
 
     return config
-
-
-def configure(conf, **kwargs):
-    font_file = kwargs.get('font_file', None)
-    if font_file is None:
-        return
-
-    try:
-        f = open(font_file, 'r')
-    except Exception as e:
-        print str(e)
-        return
-
-    config = load_config(CONFIG_TEMPLATE)
-    # TODO: 使用 subprocess, 获取可用的字体名称
-    # 然后写入到 template 中去
-    command = 'text2image --fonts_dir=%s --list_available_fonts' % font_file
-    os.system(command)
 
 
 def gen_font_properties(config, **kwargs):
@@ -171,10 +151,6 @@ def usage():
     print '-h, --help        print usage'
     print '-c, --config      specify the configure file'
     print '-a, --action      action to apply, default "all", usable alctions are'
-    print '                  + (step 0)configure: generate a configure file template'
-    print '                    use -f to set the font file you want use'
-    print '                    e.g: %s -a config -f ~/data/fonts/times.ttf' % sys.argv[0]
-    print '                    template will be config.json.tmpl'
     print '                  + (step 1)tifbox: generate tiff picture and box files'
     print '                  + (step 2)charset: extract charset from box files'
     print '                  + (step 3)fontprop: generate font properties file'
