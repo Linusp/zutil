@@ -123,7 +123,7 @@ def cluster(config, **kwargs):
 
 
 def combine(config, **kwargs):
-    lang = config.get('lang')
+    lang = config.get('name')
     commands = []
     commands.append('mv inttemp %s.inttemp' % lang)
     commands.append('mv pffmtable %s.pffmtable' % lang)
