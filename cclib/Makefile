@@ -23,7 +23,7 @@ endef
 
 CXX=g++
 CC=gcc
-CXXFLAGS=-Wall -I $(DIR_INC)
+CXXFLAGS=-Wall -I $(DIR_INC) -std=gnu++11
 
 # options for debug
 DEBUG=YES
@@ -31,6 +31,7 @@ ifeq ($(DEBUG), YES)
     CXXFLAGS += -g
 endif
 
+MKDIR_P = mkdir -p
 DIR_SRC=./src
 DIR_TEST=./test
 DIR_INC=./inc
@@ -49,12 +50,15 @@ TEST_BIN=$(patsubst $(DIR_TEST)/%.cpp, $(DIR_BIN)/%, $(TEST_SRC))
 all: $(LIB) $(TEST_BIN)
 
 $(LIB): $(OBJS)
+	${MKDIR_P} $(DIR_LIB)
 	$(BUILD_LIBRARY)
 
 $(DIR_OBJ)/%.o: $(DIR_SRC)/%.cpp
+	${MKDIR_P} $(DIR_OBJ)
 	$(CXX) $(CXXFLAGS) $< -c -o $@
 
 $(DIR_BIN)/%: $(DIR_TEST)/%.cpp
+	${MKDIR_P} ${DIR_BIN}
 	$(CXX) $(CXXFLAGS) -L $(DIR_LIB) $< -o $@ -lzutil
 
 .PHONY: clean
