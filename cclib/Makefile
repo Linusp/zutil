@@ -23,7 +23,8 @@ endef
 
 CXX=g++
 CC=gcc
-CXXFLAGS=-Wall -I $(DIR_INC) -std=gnu++11
+CXXFLAGS = -Wall -I $(DIR_INC) -std=gnu++11
+TESTFLAGS = $(shell pkg-config cpputest --libs)
 
 # options for debug
 DEBUG=YES
@@ -33,7 +34,7 @@ endif
 
 MKDIR_P = mkdir -p
 DIR_SRC=./src
-DIR_TEST=./test
+DIR_TEST=./tests
 DIR_INC=./inc
 DIR_OBJ=./obj
 DIR_LIB=./lib
@@ -59,7 +60,7 @@ $(DIR_OBJ)/%.o: $(DIR_SRC)/%.cpp
 
 $(DIR_BIN)/%: $(DIR_TEST)/%.cpp
 	${MKDIR_P} ${DIR_BIN}
-	$(CXX) $(CXXFLAGS) -L $(DIR_LIB) $< -o $@ -lzutil
+	$(CXX) $(CXXFLAGS) -L $(DIR_LIB) $< -o $@ -lzutil $(TESTFLAGS)
 
 .PHONY: clean
 clean:
