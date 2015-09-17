@@ -1,0 +1,9 @@
+*.pyc
+venv/
+env/
+
+*.o
+*.a
+bin/
+obj/
+lib/

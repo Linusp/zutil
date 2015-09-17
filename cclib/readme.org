@@ -1,0 +1,56 @@
+* CCLib
+
+  本 C/C++ 库尽量减少对外部第三方库的依赖，只是专注于将日常工程开发中频繁使用到的功能抽象成可复用的方法。
+
+** 编译与使用
+
+   项目依赖: Cpputest，用于进行单元测试。
+
+   Debian/Ubuntu/Mint 可通过 apt-get 来安装:
+   #+BEGIN_SRC sh
+   sudo apt-get install cpputest
+   #+END_SRC
+
+   安装好依赖后执行 =make= 命令即可。若需生成 Debug 版本，执行 =make DEBUG=TRUE= ；若需生成 Release 版本，执行 =make RELEASE=TRUE= 。
+
+
+   + 单元测试
+
+     编译完成后将在 bin/ 目录下生成单元测试程序，若单元测试通过，则会有如下输出:
+     #+BEGIN_EXAMPLE
+     ..
+     OK (2 tests, 2 ran, 2 checks, 0 ignored, 0 filtered out, 0 ms)
+
+     #+END_EXAMPLE
+     若单元测试未通过，请联系 [[mailto:linusp1024@gmail.com][linusp1024@gmail.com]] ，或通过 Github 提交 Pull Request。
+
+   + 静态库使用
+
+     编译完成后，会在 lib/ 目录下生成静态库文件 *libzutil.a* ，库中各接口由 inc/ 目录下的 *zutil.hpp* 提供。
+
+     Example:
+     #+BEGIN_SRC C++
+     // format.cpp
+     #include <iostream>
+     #include "zutil.hpp"
+
+     using namespace Z;
+
+
+     int main(int argc, char *argv[])
+     {
+         std::cout << format_to_string('%d_%d', 10, 20) << '\n';
+         return 0;
+     }
+     #+END_SRC
+
+     用如下命令进行编译:
+     #+BEGIN_SRC sh
+     g++ format.cpp -I inc/ -o format -L lib/ -lzutil
+     #+END_SRC
+
+     编译成功后执行程序，将得到如下输出:
+     #+BEGIN_EXAMPLE
+     bash $ ./format
+     10_20
+     #+END_EXAMPLE

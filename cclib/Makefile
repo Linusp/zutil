@@ -27,10 +27,14 @@ CXXFLAGS = -Wall -I $(DIR_INC) -std=gnu++11
 TESTFLAGS = $(shell pkg-config cpputest --libs)
 
 # options for debug
-DEBUG=YES
-ifeq ($(DEBUG), YES)
+ifdef DEBUG
     CXXFLAGS += -g
+else
+    ifdef REALEASE
+        CXXFLAGS += -O3
+    endif
 endif
+
 
 MKDIR_P = mkdir -p
 DIR_SRC=./src
