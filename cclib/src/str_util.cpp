@@ -26,19 +26,19 @@ string Z::format_to_string(const string &fmt, ...)
     int size = ((int)fmt.size()) * 2 + 50;
     string str;
     va_list ap;
-    while (1) {     // Maximum two passes on a POSIX system...
+    while (1) {             // Maximum two passes on a POSIX system...
         str.resize(size);
         va_start(ap, fmt);
         int n = vsnprintf((char *)str.data(), size, fmt.c_str(), ap);
         va_end(ap);
-        if (n > -1 && n < size) {  // Everything worked
+        if (n > -1 && n < size) { // Everything worked
             str.resize(n);
             return str;
         }
-        if (n > -1)  // Needed size returned
-            size = n + 1;   // For null char
+        if (n > -1)             // Needed size returned
+            size = n + 1;       // For null char
         else
-            size *= 2;      // Guess at a larger size (OS specific)
+            size *= 2;         // Guess at a larger size (OS specific)
     }
     return str;
 }
@@ -73,6 +73,29 @@ vector<string> Z::split_to_vector(const string &str, const string &delims)
     // add this remain substring to vector
     if (prev_pos < str.size()) {
         res.push_back(str.substr(prev_pos, str.size() - prev_pos));
+    }
+
+    return res;
+}
+
+
+/**
+ * Join a sequence of strings
+ *
+ * @param vec: a sequence of strings to be joined
+ * @param joiner: as it says.
+ *
+ * @return a string you want
+ */
+string Z::join(const vector<string> &vec, const string &joiner)
+{
+    string res;
+
+    for (int i = 0; i < vec.size(); ++i) {
+        if (res.size() > 0) {
+            res += joiner;
+        }
+        res += vec[i];
     }
 
     return res;
