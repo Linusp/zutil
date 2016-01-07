@@ -10,6 +10,7 @@
    + [[http://mycli.net/][mycli]]: 一个带自动补全和语法高亮的 MySQL(MariaDB, Percona)客户端
    + [[https://github.com/jkbrzt/httpie][HTTPie]]: 易用的命令行 HTTP 客户端(cURL-like)
    + [[https://krita.org/][Krita]]: 美观的跨平台绘画工具
+   + [[https://github.com/ggreer/the_silver_searcher][ag]]: 强大的源代码搜索工具
 
 ** CCUtil
 
@@ -23,7 +24,6 @@
 
    见 script 目录
    + [[file:shell/trash.sh][trash.sh]]: 更安全的删除工具
-   + [[file:shell/within.sh][within.sh]]: 通过内容查找文件(目前仅支持文本文件)
 
 ** Python Script
 
