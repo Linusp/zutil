@@ -11,6 +11,22 @@
    + [[https://github.com/jkbrzt/httpie][HTTPie]]: 易用的命令行 HTTP 客户端(cURL-like)
    + [[https://krita.org/][Krita]]: 美观的跨平台绘画工具
    + [[https://github.com/ggreer/the_silver_searcher][ag]]: 强大的源代码搜索工具
+   + [[http://regexper.com/][regexper]]: 正则表达式可视化工具
+   + [[https://stedolan.github.io/jq/][jq]]: 命令行 JSON 数据处理
+   + [[http://man7.org/linux/man-pages/man1/column.1.html][column]]: 将输入按列对齐输出
+
+   以及常用的 Chrome 扩展:
+   + [[https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?utm_source%3Dchrome-app-launcher-info-dialog][Adblock Plus]]: 强大好用的广告拦截器
+   + [[https://chrome.google.com/webstore/detail/better-history/obciceimmggglbmelaidpjlmodcebijb?utm_source%3Dchrome-app-launcher-info-dialog][Better History]]: 更好的历史记录
+   + [[https://chrome.google.com/webstore/detail/avatars-for-github/pgjmdbklnfklcjfbonjfkdhaonlfogbb?utm_source%3Dchrome-app-launcher-info-dialog][Avatars for Github]]: 在 Github 的 feeds 流页面显示用户头像
+   + [[https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien?utm_source%3Dchrome-app-launcher-info-dialog][Isometric Contributions]]: Github 个人 contributions 立体展示
+   + [[https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?utm_source%3Dchrome-app-launcher-info-dialog][Octotree]]: Github 项目树状浏览工具
+   + [[https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source%3Dchrome-app-launcher-info-dialog][OneTab]]: 标签页缓存
+   + [[https://chrome.google.com/webstore/detail/simpleundoclose/emhohdghchmjepmigjojkehidlielknj?utm_source%3Dchrome-app-launcher-info-dialog][SimpleUndoClose]]: 撤销关闭的标签页(更好用的 Ctrl+Shift+T)
+   + [[https://chrome.google.com/webstore/detail/smartup-gestures/bgjfekefhjemchdeigphccilhncnjldn?utm_source%3Dchrome-app-launcher-info-dialog][smartUp 手势]]: 简单好用的鼠标手势扩展
+   + [[https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm?utm_source%3Dchrome-app-launcher-info-dialog][Proxy SwitchSharp]]: 网络代理设置及管理
+   + [[https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?utm_source%3Dchrome-app-launcher-info-dialog][Save to Pocket]]: 将文章、视频保存到 Pocket 中供以后查看
+   + [[https://chrome.google.com/webstore/detail/pixezoom-pixel-perfect-zo/hapihddkcfbbcbnncecmoojbmcefgndg?utm_source%3Dchrome-app-launcher-info-dialog][Pixelzoom]]: 图片查看时不进行像素平滑，用于查看像素画
 
 ** CCUtil
 
