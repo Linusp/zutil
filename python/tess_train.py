@@ -163,8 +163,8 @@ def usage():
 if __name__ == '__main__':
     try:
         opts, args = getopt.getopt(sys.argv[1:],
-                                   'hc:a:f:',
-                                   ['help', 'config', 'action', 'font'])
+                                   'hc:a:',
+                                   ['help', 'config', 'action'])
     except getopt.GetoptError:
         usage()
         sys.exit(1)
@@ -180,15 +180,12 @@ if __name__ == '__main__':
 
         if o in ('-c', '--config'):
             conf_name = a
-            config = load_config('ocr.json')
+            config = load_config(config_name)
 
         if o in ('-a', '--action'):
             action = a
 
-        if o in ('-f', '--font'):
-            font_file = a
-
-    if action != 'config' and config in (None, {}):
+    if not config:
         usage()
         sys.exit(1)
 
@@ -197,4 +194,4 @@ if __name__ == '__main__':
         sys.exit(1)
 
     action_func = globals()[ACTION_MAP.get(action)]
-    action_func(config, font_file=font_file)
+    action_func(config)
